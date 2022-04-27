@@ -3,8 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    antea.url = "git+https://source.fetsorn.website/fetsorn/antea";
-    csvs.url = "git+https://source.fetsorn.website/fetsorn/csvs?ref=main";
+    csvs-ui.url = "git+https://source.fetsorn.website/fetsorn/csvs-ui?ref=main";
+    csvs-sh.url = "git+https://source.fetsorn.website/fetsorn/csvs-sh?ref=main";
   };
   outputs = inputs@{ nixpkgs, ... }:
     let
@@ -15,9 +15,9 @@
               ret = f system;
               op = attrs: key:
                 let
-                  appendSystem = key: system: ret: { system = ret.key; };
+                  appendSystem = key: system: ret: { ${system} = ret.${key}; };
                 in attrs // {
-                  key = (attrs.key or { })
+                  ${key} = (attrs.${key} or { })
                     // (appendSystem key system ret);
                 };
             in builtins.foldl' op attrs (builtins.attrNames ret);
@@ -34,8 +34,8 @@
       in {
         devShell = pkgs.mkShell {
           buildInputs = [
-            inputs.antea.packages.system.timeline-backend-local
-            inputs.csvs.packages.system.csvs-sh
+            inputs.csvs-ui.packages.${system}.csvs-ui-backend-local
+            inputs.csvs-sh.packages.${system}.csvs-sh
             pkgs.git-lfs
           ];
           shellHook = ''
