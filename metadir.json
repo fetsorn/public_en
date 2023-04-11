@@ -1,11 +1,37 @@
 {
-  "filepath": {
+  "files": {
     "trunk": "datum",
+    "type": "array",
+    "description": {
+      "en": "Digital assets",
+      "ru": "Файлы"
+    }
+  },
+  "file": {
+    "trunk": "files",
+    "type": "object",
+    "task": "file",
+    "description": {
+      "en": "Digital asset",
+      "ru": "Файл"
+    }
+  },
+  "filename": {
+    "trunk": "file",
     "type": "string",
-    "task": "path",
+    "task": "filename",
     "description": {
       "en": "Path to a digital asset",
       "ru": "Путь к файлу"
+    }
+  },
+  "filehash": {
+    "trunk": "file",
+    "type": "hash",
+    "task": "filehash",
+    "description": {
+      "en": "Hashsum of the file",
+      "ru": "Хэш файла"
     }
   },
   "actdate": {
@@ -15,15 +41,6 @@
     "description": {
       "en": "Date of the event",
       "ru": "Дата события"
-    }
-  },
-  "moddate": {
-    "trunk": "filepath",
-    "task": "date",
-    "dir": "date",
-    "description": {
-      "en": "Date of the file",
-      "ru": "Дата файла"
     }
   },
   "datum": {
@@ -43,35 +60,12 @@
       "ru": "Дата записи"
     }
   },
-  "filehash": {
-    "trunk": "filepath",
-    "type": "hash",
-    "description": {
-      "en": "Hashsum of the file",
-      "ru": "Хэш файла"
-    }
-  },
   "category": {
     "trunk": "datum",
     "type": "string",
     "description": {
       "en": "Category",
       "ru": "Категория"
-    }
-  },
-  "filesize": {
-    "trunk": "filepath",
-    "description": {
-      "en": "Size of the file",
-      "ru": "Размер файла"
-    }
-  },
-  "filetype": {
-    "trunk": "filepath",
-    "type": "string",
-    "description": {
-      "en": "Type of the file",
-      "ru": "Тип файла"
     }
   },
   "actname": {
