@@ -1,0 +1,16 @@
+actdate,Date of the event
+actname,Name of the person in the event
+branch,Branch name
+category,Category
+datum,Description of the event
+description_en,Branch description EN
+description_ru,Branch description RU
+entry,Record
+file,Digital asset
+fileext,Extension of the file
+filehash,Hashsum of the file
+filename,Name of digital asset
+privacy,Privacy
+saydate,Date of record
+sayname,Name of the person who made the record
+task,Branch task

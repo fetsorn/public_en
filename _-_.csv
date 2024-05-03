@@ -1,0 +1,14 @@
+branch,description_en
+branch,description_ru
+branch,task
+entry,actdate
+entry,actname
+entry,category
+entry,datum
+entry,file
+entry,privacy
+entry,saydate
+entry,sayname
+file,fileext
+file,filehash
+file,filename
